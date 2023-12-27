@@ -3093,7 +3093,7 @@ bool Chainstate::ActivateBestChainStep(BlockValidationState& state, CBlockIndex*
             // then that is a failure of our local system -- we should abort
             // rather than stay on a less work chain.
             FatalError(m_chainman.GetNotifications(), state, "Failed to disconnect block; see debug.log for details");
-            return false;
+            return true;
         }
         fBlocksDisconnected = true;
     }
